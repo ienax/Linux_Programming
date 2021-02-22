@@ -26,6 +26,7 @@ bool init_library(const char *lib_name, const char *fun_name, const char *arg) {
         return false;
 
     printf("%d\n", someSecretFunctionPrototype(atoi(arg)));
+    dlclose(hdl);
     return true;
 }
 

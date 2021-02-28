@@ -18,6 +18,7 @@ bool init_library(const char *lib_name, const char *fun_name, const char *arg) {
     strcat(concat_library_name, lib_name);
 
     void *hdl = dlopen(concat_library_name, RTLD_LAZY);
+    free(concat_library_name);
     if (NULL == hdl)
         return false;
 
